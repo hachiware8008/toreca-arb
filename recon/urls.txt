@@ -1,6 +1,5 @@
-# shop<TAB>name<TAB>url  （第4回：全商品を価格の高い順に並べられるか確認）
-hare2buy	all_desc_p1	https://www.hare2buy.com/product-list?keyword=&order=desc&num=120
-hare2buy	all_desc_p5	https://www.hare2buy.com/product-list?keyword=&order=desc&num=120&page=5
-cardrush	all_desc_p1	https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=120
-cardrush	all_desc_p5	https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=120&page=5
-cardrush	all_desc_p15	https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=120&page=15
+# shop	name	url  （第5回：カードラッシュで5,000円以上の商品が何ページあるか）
+cardrush	desc_p50	https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=100&page=50
+cardrush	desc_p100	https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=100&page=100
+cardrush	desc_p150	https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=100&page=150
+cardrush	desc_p250	https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=100&page=250
