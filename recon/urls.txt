@@ -1,7 +1,8 @@
-# shop<TAB>name<TAB>url  （ページ構造調査用 第2回：買取価格の取得元を探す）
-hare2buy	robots	https://www.hare2buy.com/robots.txt
-hare2buy	top	https://www.hare2buy.com/
-hare2buy	products_json	https://www.hare2buy.com/products.json?limit=5
-hare2buy	search	https://www.hare2buy.com/search?q=%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%89%E3%83%B3
-cardrush_corp	top	https://www.cardrush.jp/
-hareruya2	collections_json	https://www.hareruya2.com/collections.json?limit=30
+# shop<TAB>name<TAB>url  （第3回：一覧ページの件数・並び替えパラメータの確認）
+hare2buy	kw_lizardon	https://www.hare2buy.com/product-list?keyword=%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%89%E3%83%B3
+hare2buy	cat187_default	https://www.hare2buy.com/product-list/187
+hare2buy	cat187_num100_pricedesc	https://www.hare2buy.com/product-list/187?num=100&sort=price_desc
+hare2buy	cat187_p2	https://www.hare2buy.com/product-list/187?page=2
+cardrush	grp22_default	https://www.cardrush-pokemon.jp/product-group/22
+cardrush	grp22_num100_pricedesc	https://www.cardrush-pokemon.jp/product-group/22?num=100&sort=price_desc
+cardrush	grp22_p2	https://www.cardrush-pokemon.jp/product-group/22?page=2

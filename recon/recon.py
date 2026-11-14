@@ -64,6 +64,8 @@ def main() -> int:
     with open(os.path.join(OUT, "summary.json"), "w", encoding="utf-8") as w:
         json.dump(summary, w, ensure_ascii=False, indent=2)
     ok = sum(1 for s in summary if s["status"] == 200)
+    if os.environ.get("RECON_NOTIFY") != "1":
+        return 0
     notify(f"テスト通知：ページ調査が完了しました（{ok}/{len(summary)}件取得成功）。この通知が届いていれば通知設定はOKです。")
     return 0
 
