@@ -1,6 +1,4 @@
-# shop	name	url  （第6回：スニダン・メルカリに届くか）
-snkrdunk	robots	https://snkrdunk.com/robots.txt
-snkrdunk	top	https://snkrdunk.com/
+# shop	name	url  （第7回：スニダンの並び替え・PSA10価格の場所）
 snkrdunk	search	https://snkrdunk.com/search?keywords=%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%89%E3%83%B3
-mercari	robots	https://jp.mercari.com/robots.txt
-mercari	search	https://jp.mercari.com/search?keyword=%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%89%E3%83%B3
+snkrdunk	product	https://snkrdunk.com/apparels/103079
+snkrdunk	product_used	https://snkrdunk.com/apparels/103079/used
