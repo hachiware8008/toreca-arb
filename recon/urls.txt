@@ -1,5 +1,6 @@
-# shop	name	url  （第5回：カードラッシュで5,000円以上の商品が何ページあるか）
-cardrush	desc_p50	https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=100&page=50
-cardrush	desc_p100	https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=100&page=100
-cardrush	desc_p150	https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=100&page=150
-cardrush	desc_p250	https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=100&page=250
+# shop	name	url  （第6回：スニダン・メルカリに届くか）
+snkrdunk	robots	https://snkrdunk.com/robots.txt
+snkrdunk	top	https://snkrdunk.com/
+snkrdunk	search	https://snkrdunk.com/search?keywords=%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%89%E3%83%B3
+mercari	robots	https://jp.mercari.com/robots.txt
+mercari	search	https://jp.mercari.com/search?keyword=%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%89%E3%83%B3
