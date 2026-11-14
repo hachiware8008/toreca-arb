@@ -1,8 +1,6 @@
-# shop<TAB>name<TAB>url  （第3回：一覧ページの件数・並び替えパラメータの確認）
-hare2buy	kw_lizardon	https://www.hare2buy.com/product-list?keyword=%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%89%E3%83%B3
-hare2buy	cat187_default	https://www.hare2buy.com/product-list/187
-hare2buy	cat187_num100_pricedesc	https://www.hare2buy.com/product-list/187?num=100&sort=price_desc
-hare2buy	cat187_p2	https://www.hare2buy.com/product-list/187?page=2
-cardrush	grp22_default	https://www.cardrush-pokemon.jp/product-group/22
-cardrush	grp22_num100_pricedesc	https://www.cardrush-pokemon.jp/product-group/22?num=100&sort=price_desc
-cardrush	grp22_p2	https://www.cardrush-pokemon.jp/product-group/22?page=2
+# shop<TAB>name<TAB>url  （第4回：全商品を価格の高い順に並べられるか確認）
+hare2buy	all_desc_p1	https://www.hare2buy.com/product-list?keyword=&order=desc&num=120
+hare2buy	all_desc_p5	https://www.hare2buy.com/product-list?keyword=&order=desc&num=120&page=5
+cardrush	all_desc_p1	https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=120
+cardrush	all_desc_p5	https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=120&page=5
+cardrush	all_desc_p15	https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=120&page=15
