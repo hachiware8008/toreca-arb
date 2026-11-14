@@ -8,7 +8,8 @@ REQUEST_TIMEOUT_SEC = 30
 # 仕入れ先A：カードラッシュ（販売価格・高い順の全件一覧をページ送りで巡回）
 CARDRUSH_LIST_URL = "https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=100&page={page}"
 CARDRUSH_PRODUCT_URL = "https://www.cardrush-pokemon.jp/product/{pid}"
-CARDRUSH_PAGES_PER_RUN = 13   # 1回の実行で巡回するページ数（GitHub Actionsの無料枠に収めるため）
+CARDRUSH_PAGES_PER_RUN = 10   # 1回の実行で巡回するページ数。5,000円以上は約55ページ＝約3時間で1周
+RUN_TIME_BUDGET_SEC = 38      # 取得にかける時間の上限（1回の実行を1分以内＝無料枠内に収める）
 
 # 売り先B：晴れる屋2ネット買取（買取価格・高い順。毎回先頭から取得）
 HARE2BUY_LIST_URL = "https://www.hare2buy.com/product-list?keyword=&order=desc&num=120&page={page}"
@@ -26,7 +27,7 @@ B_SHIPPING = 500          # 晴れる屋2ネット買取へ送る送料
 TRANSFER_FEE = 0          # 買取代金の振込手数料
 
 RENOTIFY_HOURS = 24       # 同じ組み合わせを再通知しない時間
-A_STALE_HOURS = 3         # この時間より古いA価格は比較に使わない
+A_STALE_HOURS = 4         # この時間より古いA価格は比較に使わない（1周約3時間＋余裕）
 DROP_AFTER_HOURS = 24     # この時間見かけなかった商品は記録から外す
 
 # --- 死活監視 -------------------------------------------------------------

@@ -67,10 +67,12 @@ def notify(title: str, message: str, click: str | None = None, actions: list | N
 
 
 # ---------------------------------------------------------------- fetchers
-def fetch_pages(url_tpl: str, pages: range, shop: str, stop_below: int):
+def fetch_pages(url_tpl: str, pages: range, shop: str, stop_below: int, deadline: float | None = None):
     """ページを順に取得。(items, ok_pages, ng_pages, 最後に取得したページ, 末尾到達) を返す。"""
     items, ok, ng, last, reached_end = [], 0, 0, None, False
     for page in pages:
+        if deadline is not None and time.monotonic() > deadline:
+            break
         try:
             got = parse_list(http_get(url_tpl.format(page=page)), shop)
         except Exception as e:  # noqa: BLE001
@@ -101,6 +103,7 @@ def to_record(item, key, url: str, now: datetime) -> dict:
 # ---------------------------------------------------------------- main
 def run(now: datetime | None = None) -> int:
     now = now or datetime.now(timezone.utc)
+    deadline = time.monotonic() + C.RUN_TIME_BUDGET_SEC
     today = now.astimezone(JST).date().isoformat()
     state = load("state.json", {})
     first_run = not state
@@ -127,20 +130,22 @@ def run(now: datetime | None = None) -> int:
     # --- A：カードラッシュ（前回の続きから数ページ）
     cursor = int(state.get("cardrush_cursor", 1))
     a_items, ok, ng, last, reached_end = fetch_pages(
-        C.CARDRUSH_LIST_URL, range(cursor, cursor + C.CARDRUSH_PAGES_PER_RUN), "cardrush", C.MIN_A_PRICE)
+        C.CARDRUSH_LIST_URL, range(cursor, cursor + C.CARDRUSH_PAGES_PER_RUN), "cardrush", C.MIN_A_PRICE, deadline)
     stats["fetch_ok"] += ok
     stats["fetch_ng"] += ng
-    a_ok = ok > 0
-    if update_failures(state, "cardrush", a_ok):
+    a_failed = ng > 0 and ok == 0   # 時間切れで1ページも取らなかった場合は失敗に数えない
+    if update_failures(state, "cardrush", not a_failed):
         alerts.append("カードラッシュ")
     for it in a_items:
         k = cardrush_key(it)
         if k:
             a_rec[it.pid] = to_record(it, k, C.CARDRUSH_PRODUCT_URL.format(pid=it.pid), now)
-    if reached_end or not a_ok:
+    if reached_end or a_failed:
         state["cardrush_cursor"] = 1
+    elif last is not None:
+        state["cardrush_cursor"] = last + 1
     else:
-        state["cardrush_cursor"] = (last or cursor) + 1
+        state["cardrush_cursor"] = cursor
     a_rec = prune(a_rec, now)
     save("cardrush.json", a_rec)
 
