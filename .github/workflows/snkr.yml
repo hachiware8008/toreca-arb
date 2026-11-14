@@ -1,0 +1,54 @@
+name: snkr
+
+on:
+  schedule:
+    - cron: "15 */2 * * *"   # 2時間おき（毎時15分。価格差監視とずらす）
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "monitor/snkr.py"
+      - ".github/workflows/snkr.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: snkr
+  cancel-in-progress: false
+
+jobs:
+  snkr:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      DATA_KEY: ${{ secrets.DATA_KEY || secrets.NTFY_TOPIC }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: data
+          path: data
+      - name: Decrypt state
+        run: |
+          test -n "$DATA_KEY" || { echo "鍵が未設定のため中止（平文で保存しないため）"; exit 1; }
+          mkdir -p data/snkr
+          if [ -f data/snkr.tar.gz.enc ]; then
+            openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -pass env:DATA_KEY \
+              -in data/snkr.tar.gz.enc | tar -xzf - -C data/snkr
+          fi
+      - name: Run snkrdunk monitor
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          DATA_DIR: data
+        run: python3 -m monitor.snkr
+      - name: Encrypt and save state to data branch
+        working-directory: data
+        run: |
+          tar -czf - -C snkr . \
+            | openssl enc -aes-256-cbc -pbkdf2 -iter 200000 -salt -pass env:DATA_KEY -out snkr.tar.gz.enc
+          git config user.name "toreca-arb-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -f snkr.tar.gz.enc
+          git commit -q -m "snkr: $(date -u +%Y-%m-%dT%H:%MZ)" || exit 0
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
