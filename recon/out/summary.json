@@ -1,51 +1,41 @@
 [
   {
-    "shop": "hare2buy",
-    "name": "all_desc_p1",
-    "url": "https://www.hare2buy.com/product-list?keyword=&order=desc&num=120",
-    "final_url": "https://www.hare2buy.com/product-list?keyword=&order=desc&num=120",
-    "status": 200,
-    "bytes": 893919,
-    "content_type": "text/html; charset=utf-8",
-    "server": "Apache"
-  },
-  {
-    "shop": "hare2buy",
-    "name": "all_desc_p5",
-    "url": "https://www.hare2buy.com/product-list?keyword=&order=desc&num=120&page=5",
-    "final_url": "https://www.hare2buy.com/product-list?keyword=&order=desc&num=120&page=5",
-    "status": 200,
-    "bytes": 893456,
-    "content_type": "text/html; charset=utf-8",
-    "server": "Apache"
-  },
-  {
     "shop": "cardrush",
-    "name": "all_desc_p1",
-    "url": "https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=120",
-    "final_url": "https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=120",
+    "name": "desc_p50",
+    "url": "https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=100&page=50",
+    "final_url": "https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=100&page=50",
     "status": 200,
-    "bytes": 409854,
+    "bytes": 401194,
     "content_type": "text/html; charset=utf-8",
     "server": "cloudflare"
   },
   {
     "shop": "cardrush",
-    "name": "all_desc_p5",
-    "url": "https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=120&page=5",
-    "final_url": "https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=120&page=5",
+    "name": "desc_p100",
+    "url": "https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=100&page=100",
+    "final_url": "https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=100&page=100",
     "status": 200,
-    "bytes": 403847,
+    "bytes": 400839,
     "content_type": "text/html; charset=utf-8",
     "server": "cloudflare"
   },
   {
     "shop": "cardrush",
-    "name": "all_desc_p15",
-    "url": "https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=120&page=15",
-    "final_url": "https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=120&page=15",
+    "name": "desc_p150",
+    "url": "https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=100&page=150",
+    "final_url": "https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=100&page=150",
     "status": 200,
-    "bytes": 402532,
+    "bytes": 398776,
+    "content_type": "text/html; charset=utf-8",
+    "server": "cloudflare"
+  },
+  {
+    "shop": "cardrush",
+    "name": "desc_p250",
+    "url": "https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=100&page=250",
+    "final_url": "https://www.cardrush-pokemon.jp/product-list?keyword=&order=desc&num=100&page=250",
+    "status": 200,
+    "bytes": 399266,
     "content_type": "text/html; charset=utf-8",
     "server": "cloudflare"
   }
