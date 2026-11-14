@@ -1,182 +1,62 @@
 [
   {
-    "shop": "cardrush",
+    "shop": "hare2buy",
     "name": "robots",
-    "url": "https://www.cardrush-pokemon.jp/robots.txt",
-    "final_url": "https://www.cardrush-pokemon.jp/robots.txt",
+    "url": "https://www.hare2buy.com/robots.txt",
+    "final_url": "https://www.hare2buy.com/robots.txt",
     "status": 200,
     "bytes": 110,
     "content_type": "text/plain; charset=utf-8",
-    "server": "cloudflare"
+    "server": "Apache"
   },
   {
-    "shop": "cardrush",
+    "shop": "hare2buy",
     "name": "top",
-    "url": "https://www.cardrush-pokemon.jp/",
-    "final_url": "https://www.cardrush-pokemon.jp/",
+    "url": "https://www.hare2buy.com/",
+    "final_url": "https://www.hare2buy.com/",
     "status": 200,
-    "bytes": 369163,
+    "bytes": 428704,
     "content_type": "text/html; charset=utf-8",
-    "server": "cloudflare"
+    "server": "Apache"
   },
   {
-    "shop": "cardrush",
-    "name": "search",
-    "url": "https://www.cardrush-pokemon.jp/product-list?keyword=%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%89%E3%83%B3",
-    "final_url": "https://www.cardrush-pokemon.jp/product-list?keyword=%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%89%E3%83%B3",
-    "status": 200,
-    "bytes": 402724,
-    "content_type": "text/html; charset=utf-8",
-    "server": "cloudflare"
-  },
-  {
-    "shop": "cardrush_media",
-    "name": "robots",
-    "url": "https://cardrush.media/robots.txt",
-    "final_url": "https://cardrush.media/robots.txt",
-    "status": 403,
-    "bytes": 118,
-    "content_type": "text/html",
-    "server": "awselb/2.0"
-  },
-  {
-    "shop": "cardrush_media",
-    "name": "buy",
-    "url": "https://cardrush.media/pokemon/buying_prices",
-    "final_url": "https://cardrush.media/pokemon/buying_prices",
-    "status": 403,
-    "bytes": 118,
-    "content_type": "text/html",
-    "server": "awselb/2.0"
-  },
-  {
-    "shop": "yuyutei",
-    "name": "robots",
-    "url": "https://yuyu-tei.jp/robots.txt",
-    "final_url": "https://yuyu-tei.jp/robots.txt",
-    "status": 403,
-    "bytes": 134,
-    "content_type": null,
-    "server": null
-  },
-  {
-    "shop": "yuyutei",
-    "name": "sell_top",
-    "url": "https://yuyu-tei.jp/top/poc",
-    "final_url": "https://yuyu-tei.jp/top/poc",
-    "status": 403,
-    "bytes": 134,
-    "content_type": null,
-    "server": null
-  },
-  {
-    "shop": "yuyutei",
-    "name": "sell_search",
-    "url": "https://yuyu-tei.jp/sell/poc/s/search?search_word=%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%89%E3%83%B3",
-    "final_url": "https://yuyu-tei.jp/sell/poc/s/search?search_word=%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%89%E3%83%B3",
-    "status": 403,
-    "bytes": 134,
-    "content_type": null,
-    "server": null
-  },
-  {
-    "shop": "yuyutei",
-    "name": "buy_search",
-    "url": "https://yuyu-tei.jp/buy/poc/s/search?search_word=%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%89%E3%83%B3",
-    "final_url": "https://yuyu-tei.jp/buy/poc/s/search?search_word=%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%89%E3%83%B3",
-    "status": 403,
-    "bytes": 134,
-    "content_type": null,
-    "server": null
-  },
-  {
-    "shop": "hareruya2",
-    "name": "robots",
-    "url": "https://www.hareruya2.com/robots.txt",
-    "final_url": "https://www.hareruya2.com/robots.txt",
-    "status": 200,
-    "bytes": 2225,
-    "content_type": "text/plain; charset=utf-8",
-    "server": "cloudflare"
-  },
-  {
-    "shop": "hareruya2",
-    "name": "top",
-    "url": "https://www.hareruya2.com/",
-    "final_url": "https://www.hareruya2.com/",
-    "status": 200,
-    "bytes": 1863021,
-    "content_type": "text/html; charset=utf-8",
-    "server": "cloudflare"
-  },
-  {
-    "shop": "hareruya2",
+    "shop": "hare2buy",
     "name": "products_json",
-    "url": "https://www.hareruya2.com/products.json?limit=5",
-    "final_url": "https://www.hareruya2.com/products.json?limit=5",
+    "url": "https://www.hare2buy.com/products.json?limit=5",
+    "final_url": "https://www.hare2buy.com/products.json?limit=5",
+    "status": 404,
+    "bytes": 154233,
+    "content_type": "text/html; charset=utf-8",
+    "server": "Apache"
+  },
+  {
+    "shop": "hare2buy",
+    "name": "search",
+    "url": "https://www.hare2buy.com/search?q=%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%89%E3%83%B3",
+    "final_url": "https://www.hare2buy.com/search?q=%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%89%E3%83%B3",
+    "status": 404,
+    "bytes": 154233,
+    "content_type": "text/html; charset=utf-8",
+    "server": "Apache"
+  },
+  {
+    "shop": "cardrush_corp",
+    "name": "top",
+    "url": "https://www.cardrush.jp/",
+    "final_url": "https://www.cardrush.jp/",
     "status": 200,
-    "bytes": 9730,
-    "content_type": "application/json; charset=utf-8",
-    "server": "cloudflare"
+    "bytes": 269791,
+    "content_type": "text/html; charset=utf-8",
+    "server": "Apache"
   },
   {
     "shop": "hareruya2",
-    "name": "search",
-    "url": "https://www.hareruya2.com/search?q=%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%89%E3%83%B3",
-    "final_url": "https://www.hareruya2.com/search?q=%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%89%E3%83%B3",
+    "name": "collections_json",
+    "url": "https://www.hareruya2.com/collections.json?limit=30",
+    "final_url": "https://www.hareruya2.com/collections.json?limit=30",
     "status": 200,
-    "bytes": 3261149,
-    "content_type": "text/html; charset=utf-8",
-    "server": "cloudflare"
-  },
-  {
-    "shop": "kanabell",
-    "name": "robots",
-    "url": "https://www.ka-nabell.com/robots.txt",
-    "final_url": "https://www.ka-nabell.com/robots.txt",
-    "status": 403,
-    "bytes": 5533,
-    "content_type": "text/html; charset=UTF-8",
-    "server": "cloudflare"
-  },
-  {
-    "shop": "kanabell",
-    "name": "top",
-    "url": "https://www.ka-nabell.com/?genre=pokemon",
-    "final_url": "https://www.ka-nabell.com/?genre=pokemon",
-    "status": 403,
-    "bytes": 5560,
-    "content_type": "text/html; charset=UTF-8",
-    "server": "cloudflare"
-  },
-  {
-    "shop": "dorasuta",
-    "name": "robots",
-    "url": "https://dorasuta.jp/robots.txt",
-    "final_url": "https://dorasuta.jp/robots.txt",
-    "status": 403,
-    "bytes": 5463,
-    "content_type": "text/html; charset=UTF-8",
-    "server": "cloudflare"
-  },
-  {
-    "shop": "dorasuta",
-    "name": "top",
-    "url": "https://dorasuta.jp/pokemon-card",
-    "final_url": "https://dorasuta.jp/pokemon-card",
-    "status": 403,
-    "bytes": 5469,
-    "content_type": "text/html; charset=UTF-8",
-    "server": "cloudflare"
-  },
-  {
-    "shop": "dorasuta",
-    "name": "search",
-    "url": "https://dorasuta.jp/pokemon-card/product-list?kw=%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%89%E3%83%B3",
-    "final_url": "https://dorasuta.jp/pokemon-card/product-list?kw=%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%89%E3%83%B3",
-    "status": 403,
-    "bytes": 5756,
-    "content_type": "text/html; charset=UTF-8",
+    "bytes": 6804,
+    "content_type": "application/json; charset=utf-8",
     "server": "cloudflare"
   }
 ]
